@@ -1,0 +1,26 @@
+ai-agent/
+├── mcp_server.py             # ← ВОТ ЗДЕСЬ! Главный MCP сервер для Continue CLI
+├── rag_core.py               # Основная RAG логика (объединяет сервисы)
+├── api_client.py             # Клиент к вашему LLM API
+├── requirements.txt          # Зависимости
+├── .env                      # Настройки
+├── .gitignore                # Игнорируем .env и data/
+│
+├── data/                     # Данные (не в git)
+│   ├── documents/            # Исходные PDF файлы
+│   ├── processed/            # Обработанные тексты
+│   └── chroma_db/            # Векторная БД
+│
+├── services/                 # Сервисы (каждый в отдельном файле)
+│   ├── pdf_loader.py         # Загрузка и парсинг PDF
+│   ├── text_chunker.py       # Разбиение текста на чанки
+│   ├── chroma_service.py     # Работа с векторной БД
+│   └── embedding_service.py  # Работа с эмбеддингами
+│
+├── api/                      # FastAPI приложение
+│   ├── main.py               # Основное приложение FastAPI
+│   ├── endpoints.py          # API endpoints
+│   └── models.py             # Pydantic модели
+│
+└── scripts/                  # Вспомогательные скрипты
+    └── ingest_pdfs.py        # Скрипт для пакетной загрузки PDF
