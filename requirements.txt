@@ -1,0 +1,19 @@
+# Веб-фреймворк и сервер
+fastapi==0.127.1
+uvicorn[standard]==0.40.0
+
+# Валидация данных и настройки (Pydantic v2)
+pydantic>=2.7.0
+pydantic-settings>=2.0.0
+
+# Обработка PDF
+pymupdf==1.26.7
+
+# Векторная база данных
+chromadb==0.4.22
+
+# HTTP-клиент и утилиты
+httpx==0.27.0
+python-dotenv==1.0.0
+python-multipart==0.0.9
+tqdm==4.66.0
